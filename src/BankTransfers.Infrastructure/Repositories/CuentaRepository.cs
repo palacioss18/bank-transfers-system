@@ -25,14 +25,14 @@ public class CuentaRepository
         using var reader = command.ExecuteReader();
         if (reader.Read())
         {
-            return new Cuenta
-            {
-                IdCuenta = (int)reader["IdCuenta"],
-                NumeroCuenta = (string)reader["NumeroCuenta"],
-                IdCliente = (int)reader["IdCliente"],
-                Estado = (string)reader["Estado"],
-                FechaCreacion = (DateTime)reader["FechaCreacion"]
-            };
+            return new Cuenta(
+                (int)reader["IdCuenta"],
+                (string)reader["NumeroCuenta"],
+                (int)reader["IdCliente"],
+                (decimal)reader["Saldo"],
+                (string)reader["Estado"],
+                (DateTime)reader["FechaCreacion"]
+            );
         }
 
         return null;

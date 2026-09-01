@@ -9,6 +9,19 @@ public class Cuenta
     public string Estado { get; set; } = "Activa";
     public DateTime FechaCreacion { get; set; } = DateTime.Now;
 
+    public Cuenta() { }
+
+    // Constructor para inicializar con saldo proveniente de la base de datos
+    public Cuenta(int idCuenta, string numeroCuenta, int idCliente, decimal saldo, string estado, DateTime fechaCreacion)
+    {
+        IdCuenta = idCuenta;
+        NumeroCuenta = numeroCuenta;
+        IdCliente = idCliente;
+        Saldo = saldo;
+        Estado = estado;
+        FechaCreacion = fechaCreacion;
+    }
+
     public void Depositar(decimal monto)
     {
         if (monto <= 0)

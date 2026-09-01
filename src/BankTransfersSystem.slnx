@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BankTransfers.App/BankTransfers.App.csproj" />
+  <Project Path="BankTransfers.Domain/BankTransfers.Domain.csproj" />
+  <Project Path="BankTransfers.Infrastructure/BankTransfers.Infrastructure.csproj" />
+</Solution>
